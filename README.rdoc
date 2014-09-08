@@ -1,0 +1,36 @@
+Tested:
+
+Untested:
+
+A test can be set to collaborators only, in which case only a collaborator can create a solution. (collaborator-only method in test)
+
+A user can create a new solution for any test.
+
+Unfinished:
+
+A user can only update solutions that they have authored.
+
+Any user can write a test.
+
+A user should be able to see all collaborators' tests
+
+A solution has 3 statuses, "new", "in progrees", and "complete". Only the author of the solution can toggle the status
+
+A test has 3 statuses, "new", "in progress", and "complete"
+
+If a test status is complete, it should no longer be displayed to anyone but the author and the collaborators, and no new solutions should be able to be submitted.
+
+Navbar: "Collaborators" "All Tests" "New Test"
+
+rspec should be run when either the test author or the solution author tell rspec to run.
+
+Results of an rspec run should be displayed publicly under the screens
+
+Super bonus!!! A test author can only update the test, and a solution author can only update the solution. If both author's click the switch button, the solution author should be able to edit the test and not the solution, and the test author should be able to edit the solution and not the test for maximum versatility.
+
+
+
+
+make sure user knows what to do when they come to the page
+
+make sure rspec works well

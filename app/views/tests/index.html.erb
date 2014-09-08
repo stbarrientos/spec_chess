@@ -1,0 +1,7 @@
+<h2>Available Projects:</h2>
+
+<ul>
+	<% @tests.each do |t| %>
+	<li><%= link_to t.description, test_path(t) %></li>
+	<% end %>
+</ul>

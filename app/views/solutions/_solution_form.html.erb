@@ -1,0 +1,17 @@
+<%= form_for @solution, url: test_solutions_path(@test.id) do |s| %>
+<p>
+	<%= s.label :description %>
+	<%= s.text_field :description %>
+</p>
+<p>
+	<%= s.label :status %>
+	<%= s.text_field :status %>
+</p>
+<p>
+	<%= s.label :code %>
+	<%= s.text_area :code %>
+</p>
+<p>
+	<%= s.submit %>
+</p>
+<% end %>

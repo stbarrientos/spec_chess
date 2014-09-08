@@ -1,0 +1,22 @@
+<%= form_for @test do |t| %>
+<p>
+	<%= t.label :name %>
+	<%= t.text_field :name %>
+</p>
+<p>
+	<%= t.label :description %>
+	<%= t.text_field :description %>
+</p>
+<p>
+	<%= t.label :status %>
+	<%= t.text_field :status %>
+</p>
+<p>
+	<%= t.label :code %>
+	<%= t.text_area :code %>
+</p>
+<p>
+	<%= t.submit %>
+</p>
+
+<% end %>

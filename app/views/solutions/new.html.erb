@@ -1,0 +1,16 @@
+<div class="test">
+	<h2><%= @test.description %></h2>
+	<p><%= @test.code %></p>
+</div>
+<div class="solution">
+	<h2><%= @solution.description %></h2>
+	<p><%= @solution.code %></p>
+</div>
+
+<div class="solution">
+<h2><%= @solution.description %></h2>
+
+<%= render 'solution_form' %>
+</div>
+
+<%= link_to "Back to Tests", tests_path %>

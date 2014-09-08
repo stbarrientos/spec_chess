@@ -1,0 +1,15 @@
+<%= form_for @test do |t| %>
+<p>
+	<%= t.label :description %>
+	<%= t.text_field :description, readonly: true %>
+</p>
+<p>
+	<%= t.label :status %>
+	<%= t.text_field :status, readonly: true %>
+</p>
+<p>
+	<%= t.label :code %>
+	<%= t.text_area :code, readonly: true %>
+</p>
+
+<% end %>
