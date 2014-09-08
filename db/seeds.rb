@@ -15,11 +15,13 @@ users = User.create([
 ])
 
 tests = Test.create([
-	{code: "#code should go here", name: "Sample test", status: "new", description: "First test", user_id: users[0].id},
-	{code: "#more code here", name: "Test 2", status: "new", description: "Second test", user_id: users[1].id}
+	{code: "#code should go here", name: "Sam's test", status: "new", description: "First test", user_id: users[0].id},
+	{code: "#more code here", name: "Paul's Test", status: "new", description: "Second test", user_id: users[1].id}
 ])
 
 solutions = Solution.create([
-	{code: "#the solution to the first test", status: "new", description: "Solution for first test", test_id: tests[0].id},
-	{code: "#solution to the second test", status: "new", description: "Oh god please work", test_id: tests[1].id}
+	{code: "#the solution to the first test", status: "new", description: "Sam's solution for Sam's test", test_id: tests[0].id, user_id: users[0].id},
+	{code: "#solution to the second test", status: "new", description: "Sam's solution for Paul's test", test_id: tests[1].id,user_id: users[0].id},
+	{code: "#solution to the third test", status: "new", description: "Paul's solution for Sam's test", test_id: tests[0].id,user_id: users[1].id},
+	{code: "#solution to the fourth test", status: "new", description: "Paul's solution for Paul's test", test_id: tests[1].id,user_id: users[1].id}
 ])

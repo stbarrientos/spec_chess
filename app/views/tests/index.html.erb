@@ -2,6 +2,10 @@
 
 <ul>
 	<% @tests.each do |t| %>
-	<li><%= link_to t.description, test_path(t) %></li>
+	<li><%= link_to t.name, test_path(t) %></li>
 	<% end %>
 </ul>
+
+<h3>Output:</h3>
+<p><%= @stdout.readlines.to_s %></p>
+<p><%= @stderr.readlines unless @stderr.readlines.empty? %></p>

@@ -1,0 +1,15 @@
+<%= form_for @solution, url: {action: "update"} do |s| %>
+<p>
+	<%= s.label :description %>
+	<%= s.text_field :description, readonly: true %>
+</p>
+<p>
+	<%= s.label :status %>
+	<%= s.text_field :status, readonly: true %>
+</p>
+<p>
+	<%= s.label :code %>
+	<%= s.text_area :code, readonly: true, id: "code" %>
+</p>
+
+<% end %>

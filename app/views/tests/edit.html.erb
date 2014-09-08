@@ -1,13 +1,18 @@
 <div class="test">
-<h2><%= @test.description %></h2>
+<h2><%= @test.name %></h2>
+<p><%= @test.description %></p>
 
 <%= render 'test_form' %>
 </div>
 
 <div class="solution">
 <h2><%= @solution.description %></h2>
-
+<p>Solution user id:<%= @solution.user_id %>, current_user id <%= current_user.id %>
+<% if current_user.id == @solution.user_id %>
+<%= render 'solution_form' %>
+<% else %>
 <%= render 'display_solution' %>
+<% end %>
 </div>
 
 <%= link_to "Back to Tests", tests_path %>

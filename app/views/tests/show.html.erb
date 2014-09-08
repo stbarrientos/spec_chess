@@ -6,11 +6,7 @@
 <ul>
 <% @solutions.each do |s| %>
 <li>
-	<% if @test.user.id == current_user.id%>
-	<%= link_to s.description, edit_test_path(@test.id) %>
-	<% else %>
 	<%= link_to s.description, test_solution_path(@test.id, s.id) %>
-	<% end %>
 	<%= s.code %>
 </li>
 <% end %>

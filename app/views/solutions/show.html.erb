@@ -1,27 +1,24 @@
-<% if current_user.id == @solution.test.user_id %>
 <div class="test">
-<h2><%= @test.description %></h2>
-
+<h2><%= @test.name %></h2>
+<p><%= @test.description %></p>
+<% if current_user.id == @solution.test.user_id %>
+<%= render 'test_form' %>
+<% else %>
 <%= render 'display_test' %>
+<% end %>
 </div>
 
 <div class="solution">
 <h2><%= @solution.description %></h2>
-
+<% if current_user.id == @solution.user_id %>
 <%= render 'solution_form' %>
+<% else %>
+<%= render 'display_solution' %>
+<% end %>
+</div>
+
+<div class="output">
+	<p><%= @solution.output %></p>
 </div>
 
 <%= link_to "Back to Tests", tests_path %>
-
-<% else %>
-
-<div class="test">
-	<h2><%= @test.description %></h2>
-	<p><%= @test.code %></p>
-</div>
-<div class="solution">
-	<h2><%= @solution.description %></h2>
-	<p><%= @solution.code %></p>
-</div>
-
-<% end %>

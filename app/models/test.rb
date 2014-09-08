@@ -6,5 +6,7 @@ class Test < ActiveRecord::Base
 	def collaborator_only
 		self.status == "collaborator-only" ? true : false
 	end
+
+	
 	
 end
