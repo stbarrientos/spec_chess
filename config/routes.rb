@@ -2,15 +2,14 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'tests#index'
-
   resources :tests do
     resources :solutions
   end
 
   get 'my-collaborators', to: "collaborations#index"
-  get 'collaborator', to: "collaborations#show"
-  post 'create_collaboration', to: "collaborations#create"
-  delete 'collaborations', to: "collaborations#destroy"
+  post 'collaboration', to: "collaborations#create"
+  delete 'my-collaborators', to: "collaborations#destroy"
+
   post '/tests/:test_id/solutions/new', to: "solutions#create"
    
   # The priority is based upon order of creation: first created -> highest priority.

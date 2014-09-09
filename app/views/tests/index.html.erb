@@ -2,6 +2,8 @@
 
 <ul>
 	<% @tests.each do |t| %>
+	<% unless t.personal %>
 	<li><%= link_to t.name, test_path(t) %></li>
+	<% end %>
 	<% end %>
 </ul>

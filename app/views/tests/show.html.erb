@@ -13,8 +13,8 @@
 <p>No Solutions Yet</p>
 <% end %>
 
-<% if @test.collaborator_only %>
-<%= link_to "Collaborate!", collaborations_path(collaborator_id: @test.user.id, test_id: @test.id), method: :post %>
-<% else %>
-<%= link_to "Write new solution", new_test_solution_path(@test.id) %>
+<% unless @test.user.id == current_user.id || current_user.collaborating_with(@test.user_id) %>
+<%= link_to "Collaborate with #{@test.user.email}!", create_collaboration_path(collaborator_id: @test.user.id, test_id: @test.id), method: :create %>
 <% end %>
+<br>
+<%= link_to "Write new solution", new_test_solution_path(@test.id) %>

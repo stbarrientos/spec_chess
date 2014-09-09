@@ -1,0 +1,22 @@
+<h3>My Collaborators</h3>
+<ul>
+<% @collaborators.each do |c| %>
+<li><%= c.email %> <%= link_to "Remove", my_collaborators_path, method: :destroy %><br>
+	<p><%= "Tests:" %></p>
+	<select class="tests">
+		<option value="">Tests</option>
+		<% c.tests.each do |t| %>
+		<option value="<%= test_path(t.id) %>"><%= t.name %></option>
+		<% end %>
+	</select>
+</li>
+<% end %>
+</ul>
+
+<script>
+    document.getElementById("tests").onchange = function() {
+        if (this.selectedIndex!==0) {
+            window.location.href = this.value;
+        }        
+    };
+</script>

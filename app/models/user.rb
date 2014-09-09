@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
 	has_many :inverse_collaborations, class_name: "Collaboration", foreign_key: "collaborator_id"
 	has_many :inverse_collaborators, through: :inverse_collaborations, source: :user
 
+	def collaborating_with(x)
+		self.collaborators.find { |c| c.id == x }
+	end
+
 end

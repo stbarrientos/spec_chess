@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'jruby'
 gem 'rspec'
 
 gem 'devise'
