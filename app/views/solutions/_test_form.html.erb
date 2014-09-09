@@ -3,7 +3,7 @@
       .cm-s-default span.cm-arrow { color: red; }
 </style>
 
-<%= form_for @test do |t| %>
+<%= form_for @test, url: test_path(@test.id,@solution.id) do |t| %>
 <p>
 	<%= t.label :name %>
 	<%= t.text_field :name %>

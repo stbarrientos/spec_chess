@@ -1,5 +1,4 @@
-<h2><%= @test.description %></h2>
-<p><%= @test.code %></p>
+<%= render 'display_test' %>
 
 <h2>Solutions:</h2>
 <% unless @solutions.empty? %>
@@ -7,7 +6,6 @@
 <% @solutions.each do |s| %>
 <li>
 	<%= link_to s.description, test_solution_path(@test.id, s.id) %>
-	<%= s.code %>
 </li>
 <% end %>
 </ul>

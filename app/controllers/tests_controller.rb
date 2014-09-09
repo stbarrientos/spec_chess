@@ -22,7 +22,7 @@ class TestsController < ApplicationController
 		@test = Test.find(params[:id])
 		@test.update_attributes(test_params)
 		if @test.save
-			redirect_to test_path(@test.id)
+			redirect_to test_solution_path(@test.id, params[:format])
 		else
 			redirect_to test_path(@test.id)
 		end

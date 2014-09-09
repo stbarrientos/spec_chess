@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'collaborator', to: "collaborations#show"
   post 'create_collaboration', to: "collaborations#create"
   delete 'collaborations', to: "collaborations#destroy"
+  post '/tests/:test_id/solutions/new', to: "solutions#create"
+   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

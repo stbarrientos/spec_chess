@@ -1,6 +1,5 @@
 <div class="test">
-<h2><%= @test.name %></h2>
-<p><%= @test.description %></p>
+<p>You may not require any files or gems. Your test will not run if you require something</p>
 <% if current_user.id == @solution.test.user_id %>
 <%= render 'test_form' %>
 <% else %>

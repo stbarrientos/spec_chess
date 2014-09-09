@@ -28,3 +28,16 @@
 .output {
 	clear: both;
 }
+
+.navbar ul {
+	text-align: center;
+}
+
+.navbar li {
+	display: inline;
+	padding: 0 50px 0 50px;
+}
+
+.login {
+	float: right;
+}
