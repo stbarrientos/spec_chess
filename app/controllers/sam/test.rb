@@ -1,5 +1,2 @@
-class Test
-def initialize
-@name = name
-end
+class Person
 end

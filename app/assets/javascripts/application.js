@@ -16,4 +16,5 @@
 //= require codemirror.js
 //= require matchbrackets.js
 //= require ruby.js
+//= require customize.js
 //= require_tree .

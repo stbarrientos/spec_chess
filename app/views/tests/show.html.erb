@@ -14,7 +14,7 @@
 <% end %>
 
 <% unless @test.user.id == current_user.id || current_user.collaborating_with(@test.user_id) %>
-<%= link_to "Collaborate with #{@test.user.email}!", create_collaboration_path(collaborator_id: @test.user.id, test_id: @test.id), method: :create %>
+<%= link_to "Collaborate with #{@test.user.email}!", collaboration_path(collaborator_id: @test.user.id, test_id: @test.id), method: :create %>
 <% end %>
 <br>
 <%= link_to "Write new solution", new_test_solution_path(@test.id) %>

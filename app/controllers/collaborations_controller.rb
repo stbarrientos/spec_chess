@@ -14,8 +14,8 @@ class CollaborationsController < ApplicationController
 	end
 
 	def destroy
-		@collaboration = Collaboration.find(params[:id])
+		@collaboration = Collaboration.find_by(collaborator_id: params[:collaboration_id], user_id: current_user.id)
 		@collaboration.destroy
-		redirect_to my_collaborations_path
+		redirect_to my_collaborators_path
 	end
 end
