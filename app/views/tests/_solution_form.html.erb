@@ -1,13 +1,3 @@
-<link rel="stylesheet" href="lib/codemirror.css">
-	<script src="lib/codemirror.js"></script>
-// 	<script>
-//   	var editor = CodeMirror(document.body, {
-//   		value: "require 'spec_helper'\nrequire_relative '../app/controllers/sam/test.rb"
-//     lineNumbers: true,
-//     mode: "ruby"
-//   });
-// </script>
-
 <%= form_for @solution, url: test_solutions_path(@test.id) do |s| %>
 <p>
 	<%= s.label :description %>
@@ -25,10 +15,3 @@
 	<%= s.submit %>
 </p>
 <% end %>
-
-<script>
-var myTextArea = $("#solution_code");
-var myCodeMirror = CodeMirror(function(elt) {
-  myTextArea.parentNode.replaceChild(elt, myTextArea);
-}, {value: myTextArea.value});
-</script>

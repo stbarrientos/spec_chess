@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require codemirror.css
+ *= require docs.css
  */
 .test {
 	width: 40%;

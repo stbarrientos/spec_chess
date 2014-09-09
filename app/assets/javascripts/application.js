@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require codemirror.js
+//= require matchbrackets.js
+//= require ruby.js
 //= require_tree .

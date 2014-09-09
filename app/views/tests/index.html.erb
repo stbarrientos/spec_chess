@@ -7,5 +7,6 @@
 </ul>
 
 <h3>Output:</h3>
-<p><%= @stdout.readlines.to_s %></p>
-<p><%= @stderr.readlines unless @stderr.readlines.empty? %></p>
+<p><%= @stdout.read %></p>
+<% @stderr.flush %>
+<p><%= @stderr.read %></p>

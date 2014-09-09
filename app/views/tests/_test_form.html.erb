@@ -1,3 +1,8 @@
+<style>
+.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
+      .cm-s-default span.cm-arrow { color: red; }
+</style>
+
 <%= form_for @test do |t| %>
 <p>
 	<%= t.label :name %>
@@ -20,3 +25,12 @@
 </p>
 
 <% end %>
+
+<script>
+  var editor = CodeMirror.fromTextArea(document.getElementById("test_code"), {
+    mode: "text/x-ruby",
+    matchBrackets: true,
+    value: "require 'spec_helper'\nrequire_relative '../app/controllers/sam/test.rb'",
+    indentUnit: 4
+  });
+</script>
