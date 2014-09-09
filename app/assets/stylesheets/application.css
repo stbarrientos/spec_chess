@@ -14,15 +14,37 @@
  *= require_self
  *= require codemirror.css
  *= require docs.css
+ *= require normalize.css
  */
+.header {
+	height: 10%;
+}
+ html {
+ 	margin: 0 10px 0 10px;
+ }
+
 .test {
-	width: 40%;
+	width: 50%;
+	-webkit-box-sizing: border-box;
 	float: left;
+	border-right: 1px solid grey;
+	padding-right: 10px;
+}
+
+.test label {
+	margin-right: 20px;
 }
 
 .solution {
-	width: 40%;
+	width: 50%;
+	-webkit-box-sizing: border-box;
 	float: right;
+	padding-left: 10px;
+	border-left: 1px solid grey;
+}
+
+.solution label {
+	margin-right: 20px;
 }
 
 .output {
@@ -40,4 +62,13 @@
 
 .login {
 	float: right;
+}
+
+.output {
+	margin: 0 20% 0 20%;
+	padding: 5px 5px 5px 5px;
+	border: 2px solid grey;
+	background-color: black;
+	color: green;
+	font-family: "Consolas";
 }

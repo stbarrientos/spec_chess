@@ -2,7 +2,6 @@
 .CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}
       .cm-s-default span.cm-arrow { color: red; }
 </style>
-
 <%= form_for @solution, url: test_solution_path(@test.id, @solution.id) do |s| %>
 <p>
 	<%= s.label :name %>

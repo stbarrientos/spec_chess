@@ -5,8 +5,3 @@
 	<li><%= link_to t.name, test_path(t) %></li>
 	<% end %>
 </ul>
-
-<h3>Output:</h3>
-<p><%= @stdout.read %></p>
-<% @stderr.flush %>
-<p><%= @stderr.read %></p>
