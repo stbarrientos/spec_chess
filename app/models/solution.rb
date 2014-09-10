@@ -18,7 +18,9 @@ class Solution < ActiveRecord::Base
 		priv.allow_method :attr_accessor
 		priv.allow_method :attr_writer
 		s.run(priv, "#{self.code}")
-		s.run(priv, "#{self.test.code}")
+
+		# Need to find a way to validate test code
+		# s.run(priv, "#{self.test.code}")
 
 		File.write('./app/controllers/sam/test.rb', "#{self.code}")
 		File.write('./spec/test_spec.rb', "#{self.test.code}")

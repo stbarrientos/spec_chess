@@ -1,5 +1,5 @@
+<div class="all-tests">
 <h2>Available Projects:</h2>
-
 <ul>
 	<% @tests.each do |t| %>
 	<% unless t.personal %>
@@ -7,3 +7,11 @@
 	<% end %>
 	<% end %>
 </ul>
+</div>
+<div class="about">
+	<h3>About Spec-Chess</h3>
+	<p>Spec-Chess is a pair programming oriented webiste that uses Rspec to evaluate user written tests and solutions. In other words: you can write tests or solutions with any other user on the site.</p>
+	<h3>Coming Soon</h3>
+	<p><strong>Collaborations</strong><br>We are currently working to increase user privacy. Right now any user can view any other users tests (don't worry, no one but you cant edit your tests and solutions). This way users will be able to create projects that only users that they allow will be able to view/work on it.</p>
+	<p><strong>Better Security</strong><br>Due to obvious security risks, we have currently restricted use of all but a few ruby methods and do not allow users to require outside gems or files in their specs. As we continue to increase our security capabilites, we will free up more methods and gems for our users to use.</p>
+</div>

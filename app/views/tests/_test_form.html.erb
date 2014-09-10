@@ -4,9 +4,13 @@
 	<%= t.text_field :name %>
 </p>
 <p>
-	<%= t.label :personal %>
+	<%= t.label :personal, "Personal?" %>
+	<p>Yes
 	<%= t.radio_button :personal, true %>
+	</p>
+	<p>No
 	<%= t.radio_button :personal, false %>
+	</p>
 </p>
 <p>
 	<%= t.label :description %>

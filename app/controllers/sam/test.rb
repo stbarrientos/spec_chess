@@ -1,1 +1,6 @@
-#the solution to the first test
+class Person
+    attr_reader :name
+    def initialize(name)
+        @name = name 
+    end
+end

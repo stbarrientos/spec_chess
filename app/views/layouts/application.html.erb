@@ -8,7 +8,15 @@
 <body>
 
 	<div class="header">
-		<div class="login">
+		<h1>Spec Chess: Rspec Pair Programming For All</h1>
+		<div class="navbar">
+			<ul>
+				<li><%= link_to "Collaborators", my_collaborators_path %></li>
+				<li><%= link_to "All Tests", tests_path %></li>
+				<li><%= link_to "New Test", new_test_path %></li>
+<!-- 			</ul>
+		</div>
+		<div class="login"> -->
 			<% unless user_signed_in? %>
 			<li><%= link_to "Log In", new_user_session_path %></li>
 			<li><%= link_to "Register", new_user_registration_path %></li>
@@ -17,16 +25,13 @@
 			<li><%= link_to "Delete Account", user_registration_path , method: :delete %></li>
 			<% end %>
 		</div>
-		<div class="navbar">
-			<ul>
-				<li><%= link_to "Collaborators", my_collaborators_path %></li>
-				<li><%= link_to "All Tests", tests_path %></li>
-				<li><%= link_to "New Test", new_test_path %></li>
-			</ul>
-		</div>
 	</div>
-
+<div class="content">
 <%= yield %>
+</div>
+<footer>
+	<h4>Property of Sam Corp.</h4>
+</footer>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

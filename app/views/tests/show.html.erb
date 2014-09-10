@@ -1,3 +1,4 @@
+<div class="show-test">
 <%= render 'display_test' %>
 
 <h2>Solutions:</h2>
@@ -14,7 +15,14 @@
 <% end %>
 
 <% unless @test.user.id == current_user.id || current_user.collaborating_with(@test.user_id) %>
-<%= link_to "Collaborate with #{@test.user.email}!", collaboration_path(collaborator_id: @test.user.id, test_id: @test.id), method: :create %>
+
+<!-- Rebuild this later -->
+<!%= link_to "Collaborate with #{@test.user.email}!", collaboration_path(collaborator_id: @test.user.id, test_id: @test.id), method: :create %>
 <% end %>
 <br>
 <%= link_to "Write new solution", new_test_solution_path(@test.id) %>
+</div>
+<div class="test-tutorial">
+	<h2>Brief Overview</h2>
+	<p>Ok, you've made it to the test page. Now What? Well, as you can see the test information is on the left hand side of the page. You can read up on the author's description of the test as well as the code itself. <strong>Unless you are the author, you will not be able to edit this code.</strong> If this test intrigues you and you wish to try your hand at creating a solution, click on the Write New Solution link at the bottom of the page. If you would simply like to view other users' solutions to this test, you can click on the solutions links below the test code. Notice: If no solutions have been submitted, there will be no links.</p>
+</div>
