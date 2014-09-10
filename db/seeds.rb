@@ -20,8 +20,8 @@ tests = Test.create([
 ])
 
 solutions = Solution.create([
-	{code: "#the solution to the first test", status: "new", description: "Sam's solution for Sam's test", test_id: tests[0].id, user_id: users[0].id},
-	{code: "#solution to the second test", status: "new", description: "Sam's solution for Paul's test", test_id: tests[1].id,user_id: users[0].id},
-	{code: "#solution to the third test", status: "new", description: "Paul's solution for Sam's test", test_id: tests[0].id,user_id: users[1].id},
-	{code: "#solution to the fourth test", status: "new", description: "Paul's solution for Paul's test", test_id: tests[1].id,user_id: users[1].id}
+	{name: "Sam's Solution", code: "#the solution to the first test", status: "new", description: "Sam's solution for Sam's test", test_id: tests[0].id, user_id: users[0].id},
+	{name: "Sam's Solution", code: "#solution to the second test", status: "new", description: "Sam's solution for Paul's test", test_id: tests[1].id,user_id: users[0].id},
+	{name: "Paul's Solution", code: "#solution to the third test", status: "new", description: "Paul's solution for Sam's test", test_id: tests[0].id,user_id: users[1].id},
+	{name: "Paul's Solution", code: "#solution to the fourth test", status: "new", description: "Paul's solution for Paul's test", test_id: tests[1].id,user_id: users[1].id}
 ])

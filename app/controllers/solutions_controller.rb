@@ -27,11 +27,13 @@ class SolutionsController < ApplicationController
 		@test = Test.find(params[:test_id])
 		@solution = Solution.find(params[:id])
 		@solution.update_attributes(solution_params)
-		File.write('./app/controllers/sam/test.rb', "#{@solution.code}")
-		File.write('./spec/test_spec.rb', "#{@test.code}")
-		@stdin, @stdout, @stderr = Open3.popen3("rspec")
-		@solution.output_text = @stdout.read
-		@solution.error_message = @stderr.read
+		@solution.execute
+		# @solution.update_attributes(solution_params)
+		# File.write('./app/controllers/sam/test.rb', "#{@solution.code}")
+		# File.write('./spec/test_spec.rb', "#{@test.code}")
+		# @stdin, @stdout, @stderr = Open3.popen3("rspec")
+		# @solution.output_text = @stdout.read
+		# @solution.error_message = @stderr.read
 		if @solution.save
 			redirect_to test_solution_path(@test.id, @solution.id)
 		else

@@ -5,7 +5,7 @@
 <ul>
 <% @solutions.each do |s| %>
 <li>
-	<%= link_to s.description, test_solution_path(@test.id, s.id) %>
+	<%= link_to s.name, test_solution_path(@test.id, s.id) %>
 </li>
 <% end %>
 </ul>

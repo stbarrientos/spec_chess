@@ -1,2 +1,1 @@
-class Person
-end
+#the solution to the first test
