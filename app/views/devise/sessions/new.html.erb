@@ -1,3 +1,4 @@
+<div class="login">
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -15,3 +16,9 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+<div class="welcome">
+	<h2>Welcome!</h2>
+	<p>Spec-Chess welcomes you! Here at Spec-Chess, our goal is to turn TDD into a streamlined, collaborative exercise. By letting users create their own specs and answer other user specs, we create an environment that promotes continuous construction and implementation of working specs. Our server uses rspec to evaluate your tests and solution. As a security precaution, many ruby methods and other scripts are restricted on out site. If you notice that one of your favorite methods is banned, please let us know and we will work to sanitize it and implement it for you!</p>
+	<p>Note: This is an open source project and we encourage you to help us make modifications. You can find the source code on github <a href="https://github.com/stbarrientos/spec_chess">here</a>. Happy Coding!</p>
+</div>

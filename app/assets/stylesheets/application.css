@@ -96,7 +96,7 @@
 }
 
 .output {
-	margin: 0 20% 0 20%;
+	margin-bottom: 20px;
 	padding: 5px 5px 5px 5px;
 	border: 2px solid grey;
 	background-color: black;
@@ -156,6 +156,23 @@ html, body {
 	text-align: center;
 	clear: both;
 	height: 70px;
+}
+
+.login {
+	width: 40%;
+	float: left;
+	text-align: left;
+	margin-left:5%;
+}
+
+.login div {
+	margin-bottom: 20px;
+}
+
+.welcome {
+	width: 40%;
+	float: right;
+	margin-right: 5%;
 }
 
 
