@@ -14,8 +14,8 @@ Installing Spec Chess is pretty straightforward, all that you need to is on gith
 
 Be sure to create the database and run all of the migrations (the app will not work without them). You can seed the database if you want, there are a few records ready for use.
 
-`rake db:create`
-`rake db:migrate`
+`rake db:create`  
+`rake db:migrate`  
 `rake db:seed`
 
 Future Features
