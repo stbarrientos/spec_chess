@@ -71,6 +71,7 @@
 	float: left;
 	border-right: 1px solid grey;
 	padding-right: 10px;
+	margin-bottom: 50px;
 }
 
 .test label {
@@ -83,6 +84,7 @@
 	float: right;
 	padding-left: 10px;
 	border-left: 1px solid grey;
+	margin-bottom: 50px;
 }
 
 .solution label {
@@ -103,13 +105,14 @@
 }
 
 .all-tests {
-	width: 50%;
+	margin-left: 10%;
+	width: 40%;
 	-webkit-box-sizing: border-box;
 	float:left;
 }
 
 .about {
-	width: 50%;
+	width: 40%;
 	-webkit-box-sizing: border-box;
 	float:left;
 }
@@ -120,17 +123,39 @@
 }
 
 .test-tutorial {
-	width: 48%;
+	width: 30%;
+	text-align: left;
+	margin-right: 50px;
 	float: right;
 }
 
 footer {
-	background-color: #666666;
+	margin-top: 100px;
+
+}
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 142px; 
+}
+.site-footer {
+  background-color: #666666;
 	padding-top: 20px;
 	text-align: center;
 	clear: both;
-	height: 60px;
-
+	height: 70px;
 }
 
 
