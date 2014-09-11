@@ -24,3 +24,10 @@ Future Features
 We are currently creating a way for users to keep track of the people they have worked with in the past (collaborators) and on letting users create privatre projects that only collaborators can view and work with.
 
 Additionally, we are working to sanitize more methods so that that our security is not as crippling to our users.
+
+ERD
+---
+
+Heres an erd for Spec-Chess
+
+![erd](https://www.gliffy.com/go/html5/6153302?app=1b5094b0-6042-11e2-bcfd-0800200c9a66 "ERD")
