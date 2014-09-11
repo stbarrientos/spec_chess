@@ -30,4 +30,4 @@ ERD
 
 Heres an erd for Spec-Chess
 
-![erd](https://www.gliffy.com/go/html5/6153302?app=1b5094b0-6042-11e2-bcfd-0800200c9a66 "ERD")
+[erd](https://www.gliffy.com/go/html5/6153302?app=1b5094b0-6042-11e2-bcfd-0800200c9a66)
