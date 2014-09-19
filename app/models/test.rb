@@ -29,9 +29,6 @@ class Test < ActiveRecord::Base
 		priv.object(Person).allow :new
 		new_code = self.remove_require
 		new_code = self.add_require
-
-		# Need to validate test code
-		# s.run(priv, "#{new_code}")
 		
 		s.run(priv, "#{solution.code}")
 
