@@ -1,31 +1,24 @@
-require 'shikashi'
-
-include Shikashi
-
 class Solution < ActiveRecord::Base
 	belongs_to :test
 
 	def editable
+    # Check to see if the current user is allowed to edit any code on the screen
 		return true unless self.test.collaborator_only
 		current_user.id == self.user.id ? true : false
 	end
 
-	def execute
-		s = Sandbox.new
-		# priv = Privileges.new
-		# priv.allow_method :method_missing
-		# priv.allow_method :attr_reader
-		# priv.allow_method :attr_accessor
-		# priv.allow_method :attr_writer
-		# s.eval("#{self.code}")
+  def execute(solution)
 
-		File.write('./app/controllers/sam/test.rb', "#{self.code}")
-		File.write('./spec/test_spec.rb', "#{self.test.code}")
+    # Write the test and solution from the user into the spec test and target file
+    File.write('./app/controllers/sam/test.rb', "#{self.code}")
+    File.write('./spec/test_spec.rb', "#{self.test.code}")
 
-		# stdin,stdout,stderr = Open3.popen3("s.evalrspec")
-		output = s.eval("rspec");
-		self.output_text = stdout.read
-		self.error_message = stderr.read
-		self
-	end
+    # Execute rspec on those files
+    stdin,stdout,stderr = Open3.popen3("rspec")
+    
+    # Save the results and any errors
+    self.output_text = stdout.read
+    self.error_message = stderr.read
+    self
+  end
 end

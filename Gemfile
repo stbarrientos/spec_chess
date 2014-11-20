@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'sandbox'
+# Opal for compiling ruby in JavaScript
+gem 'opal-rails'
 
 gem 'rails_12factor', group: :production
 gem 'rspec'
-
-# gem 'shikashi'
 
 gem 'devise'
 

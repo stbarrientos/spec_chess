@@ -22,7 +22,7 @@ class TestsController < ApplicationController
 		@test = Test.find(params[:id])
 		@test.update_attributes(test_params)
 		@solution = Solution.find(params[:format])
-		@test.execute(@solution)
+    @test.execute(@solution)    
 		if @test.save
 			@solution.save
 			redirect_to test_solution_path(@test.id, params[:format])
@@ -45,10 +45,14 @@ class TestsController < ApplicationController
 		end
 	end
 
+  def compile
+  #  render js: "alert(Opal.compile(params[:code]));"
+  render js: "alert('it worked!')"
+  end
+
 	private
 
 	def test_params
 		params.require(:test).permit(:code, :description, :status, :name)
 	end
-
 end

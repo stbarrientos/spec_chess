@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'my-collaborators', to: "collaborations#index"
   post 'collaboration', to: "collaborations#create"
   delete 'my-collaborators', to: "collaborations#destroy"
-
+  put '/compile', to: 'tests#compile'
   post '/tests/:test_id/solutions/new', to: "solutions#create"
    
   # The priority is based upon order of creation: first created -> highest priority.
